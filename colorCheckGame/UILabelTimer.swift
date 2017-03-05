@@ -38,7 +38,7 @@ class UILabelTimer: UILabel {
     
     func timerUpdate() {
         
-        self.time -= 0.03
+        self.time -= 0.01
         
         if self.time < 0 {
             self.time = 0

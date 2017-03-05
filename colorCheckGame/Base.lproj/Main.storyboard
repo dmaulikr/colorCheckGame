@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,66 +20,110 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Tp-t1-Peq">
-                                <rect key="frame" x="0.0" y="235" width="375" height="1"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Tp-t1-Peq">
+                                <rect key="frame" x="0.0" y="299" width="375" height="1"/>
                                 <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="iH0-EO-gn5"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RQu-lr-6hJ" customClass="UIViewColorHead" customModule="colorCheckGame" customModuleProvider="target">
-                                <rect key="frame" x="16" y="159" width="343" height="152"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQu-lr-6hJ" customClass="UIViewColorHead" customModule="colorCheckGame" customModuleProvider="target">
+                                <rect key="frame" x="16" y="223" width="343" height="152"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="Rnk-OS-NQo"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v5Q-ey-YcR" customClass="UILabelScores" customModule="colorCheckGame" customModuleProvider="target">
-                                <rect key="frame" x="16" y="91" width="116" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="67"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qi5-gL-4wi" customClass="UILabelScores" customModule="colorCheckGame" customModuleProvider="target">
-                                <rect key="frame" x="243" y="91" width="116" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="67"/>
-                                <color key="textColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Dz-Ms-rIS" customClass="UILabelTimer" customModule="colorCheckGame" customModuleProvider="target">
-                                <rect key="frame" x="129" y="8" width="116" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Dz-Ms-rIS" customClass="UILabelTimer" customModule="colorCheckGame" customModuleProvider="target">
+                                <rect key="frame" x="111" y="72" width="153" height="60"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WEf-Vv-Snv" customClass="UILabelTimerAll" customModule="colorCheckGame" customModuleProvider="target">
-                                <rect key="frame" x="87" y="60" width="201" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v5Q-ey-YcR" customClass="UILabelScores" customModule="colorCheckGame" customModuleProvider="target">
+                                <rect key="frame" x="16" y="155" width="116" height="95"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="67"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qi5-gL-4wi" customClass="UILabelScores" customModule="colorCheckGame" customModuleProvider="target">
+                                <rect key="frame" x="243" y="155" width="116" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="j6B-De-cfd"/>
+                                    <constraint firstAttribute="width" constant="116" id="ruA-bn-Hf2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="67"/>
+                                <color key="textColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ayh-Xa-8So" customClass="UIButtonStartEnd" customModule="colorCheckGame" customModuleProvider="target">
+                                <rect key="frame" x="16" y="308" width="343" height="339"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="33"/>
+                                <state key="normal" title="Tap to start game">
+                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonStartEnd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8cI-Bq-G9f"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WEf-Vv-Snv" customClass="UILabelTimerAll" customModule="colorCheckGame" customModuleProvider="target">
+                                <rect key="frame" x="87" y="124" width="201" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="f3H-br-lXv"/>
+                                    <constraint firstAttribute="width" constant="201" id="qq2-1t-iEi"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="RQu-lr-6hJ" secondAttribute="trailing" id="69D-KY-L7z"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Ayh-Xa-8So" secondAttribute="leading" id="6k3-aj-Xdc"/>
+                            <constraint firstItem="3Dz-Ms-rIS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="7Py-2Y-m1w"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="RQu-lr-6hJ" secondAttribute="leading" id="81g-vQ-UKy"/>
+                            <constraint firstItem="3Dz-Ms-rIS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="95" id="ESK-Z9-8jw"/>
+                            <constraint firstItem="v5Q-ey-YcR" firstAttribute="width" secondItem="Qi5-gL-4wi" secondAttribute="width" id="Hue-8N-VhN"/>
+                            <constraint firstItem="8Tp-t1-Peq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lrt-2a-kMn"/>
+                            <constraint firstItem="v5Q-ey-YcR" firstAttribute="centerY" secondItem="Qi5-gL-4wi" secondAttribute="centerY" id="VIg-9z-skJ"/>
+                            <constraint firstItem="WEf-Vv-Snv" firstAttribute="top" secondItem="3Dz-Ms-rIS" secondAttribute="bottom" constant="-8" id="VdE-iF-YaR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Dz-Ms-rIS" secondAttribute="trailing" constant="95" id="WN6-Jq-Uh9"/>
+                            <constraint firstItem="Ayh-Xa-8So" firstAttribute="top" secondItem="8Tp-t1-Peq" secondAttribute="bottom" constant="8" id="XxD-1r-Epu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ayh-Xa-8So" secondAttribute="trailing" id="bgD-bA-VRi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ayh-Xa-8So" secondAttribute="bottom" constant="20" id="eXf-bK-1e9"/>
+                            <constraint firstItem="Qi5-gL-4wi" firstAttribute="top" secondItem="WEf-Vv-Snv" secondAttribute="bottom" id="iQW-Uo-x1r"/>
+                            <constraint firstItem="v5Q-ey-YcR" firstAttribute="height" secondItem="Qi5-gL-4wi" secondAttribute="height" id="jgd-Ah-Xds"/>
+                            <constraint firstItem="8Tp-t1-Peq" firstAttribute="top" secondItem="Qi5-gL-4wi" secondAttribute="bottom" constant="49" id="nGu-rL-ISz"/>
+                            <constraint firstItem="8Tp-t1-Peq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="taQ-Nz-mqK"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="v5Q-ey-YcR" secondAttribute="leading" id="vlD-vQ-4VG"/>
+                            <constraint firstItem="WEf-Vv-Snv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xAL-W5-hAt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qi5-gL-4wi" secondAttribute="trailing" id="xWI-P6-vLw"/>
+                            <constraint firstItem="RQu-lr-6hJ" firstAttribute="centerY" secondItem="8Tp-t1-Peq" secondAttribute="centerY" id="xYs-1n-sbU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nuk-oF-whM">
                         <leftBarButtonItems>
                             <barButtonItem title="≣ top" id="ctS-6G-Mcd">
                                 <color key="tintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                             </barButtonItem>
-                            <barButtonItem title="C1" id="W5F-vl-Udm" customClass="UIBarButtonItemColor" customModule="colorCheckGame" customModuleProvider="target">
+                            <barButtonItem title="☼" id="W5F-vl-Udm" customClass="UIBarButtonItemColor" customModule="colorCheckGame" customModuleProvider="target">
+                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="bckColor1:" destination="BYZ-38-t0r" id="lGV-Dg-E2h"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem tag="1" title="C2" id="Dpu-2N-HLh" customClass="UIBarButtonItemColor" customModule="colorCheckGame" customModuleProvider="target">
+                            <barButtonItem tag="1" title="☼" id="Dpu-2N-HLh" customClass="UIBarButtonItemColor" customModule="colorCheckGame" customModuleProvider="target">
+                                <color key="tintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="bckColor2:" destination="BYZ-38-t0r" id="kSL-7j-AlU"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem tag="2" title="C3" id="w9C-lA-z8r" customClass="UIBarButtonItemColor" customModule="colorCheckGame" customModuleProvider="target">
+                            <barButtonItem tag="2" title="☼" id="w9C-lA-z8r" customClass="UIBarButtonItemColor" customModule="colorCheckGame" customModuleProvider="target">
+                                <color key="tintColor" red="0.21960784310000001" green="0.2156862745" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="bckColor3:" destination="BYZ-38-t0r" id="S4m-Ha-8aU"/>
                                 </connections>
@@ -96,6 +141,7 @@
                         <outlet property="bckColor1" destination="W5F-vl-Udm" id="TXn-u5-NLT"/>
                         <outlet property="bckColor2" destination="Dpu-2N-HLh" id="PuY-Lg-upt"/>
                         <outlet property="bckColor3" destination="w9C-lA-z8r" id="qxG-FU-k9n"/>
+                        <outlet property="buttonStartEnd" destination="Ayh-Xa-8So" id="id2-jW-sEG"/>
                         <outlet property="currentTimer" destination="3Dz-Ms-rIS" id="nLR-Ae-dzr"/>
                         <outlet property="rightAnswers" destination="Qi5-gL-4wi" id="hjd-Ry-fcW"/>
                         <outlet property="wrongAnswers" destination="v5Q-ey-YcR" id="sjG-0z-Ob4"/>
@@ -110,15 +156,24 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VO3-Ew-ssf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="xAY-VV-n7s">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xAY-VV-n7s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="bo2-X3-J4b">
+                    <toolbar key="toolbar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="bo2-X3-J4b">
                         <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NXV-dz-ID1"/>

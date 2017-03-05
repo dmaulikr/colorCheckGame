@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var bckColor1: UIBarButtonItemColor!
     @IBOutlet weak var bckColor2: UIBarButtonItemColor!
     @IBOutlet weak var bckColor3: UIBarButtonItemColor!
+    @IBOutlet weak var buttonStartEnd: UIButtonStartEnd!
     
     var currentBckColorFrom: UIColor!
     
@@ -37,9 +38,13 @@ class ViewController: UIViewController {
         startNewGame()
     }
     
+    @IBAction func buttonStartEnd(_ sender: UIButtonStartEnd) {
+        sender.stateStart = !sender.stateStart
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         startNewGame()
         
         bckColor1.isActive = true
@@ -96,4 +101,3 @@ extension UIColor {
         return (color.red, color.green, color.blue, color.alpha)
     }
 }
-
