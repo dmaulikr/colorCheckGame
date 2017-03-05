@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		309BAC4F1E6C00F100BE5C01 /* UILabelTimerAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309BAC4E1E6C00F100BE5C01 /* UILabelTimerAll.swift */; };
 		309BAC531E6C06D500BE5C01 /* UIViewColorHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309BAC521E6C06D500BE5C01 /* UIViewColorHead.swift */; };
+		309BAC551E6C358600BE5C01 /* UIBarButtonItemColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309BAC541E6C358600BE5C01 /* UIBarButtonItemColor.swift */; };
 		309EC1381E6309C500ECC41D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EC1371E6309C500ECC41D /* AppDelegate.swift */; };
 		309EC13A1E6309C500ECC41D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EC1391E6309C500ECC41D /* ViewController.swift */; };
 		309EC13D1E6309C500ECC41D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309EC13B1E6309C500ECC41D /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		309BAC4E1E6C00F100BE5C01 /* UILabelTimerAll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelTimerAll.swift; sourceTree = "<group>"; };
 		309BAC521E6C06D500BE5C01 /* UIViewColorHead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewColorHead.swift; sourceTree = "<group>"; };
+		309BAC541E6C358600BE5C01 /* UIBarButtonItemColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemColor.swift; sourceTree = "<group>"; };
 		309EC1341E6309C500ECC41D /* colorCheckGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = colorCheckGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		309EC1371E6309C500ECC41D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		309EC1391E6309C500ECC41D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				309EC1391E6309C500ECC41D /* ViewController.swift */,
 				309EC13B1E6309C500ECC41D /* Main.storyboard */,
 				309BAC4E1E6C00F100BE5C01 /* UILabelTimerAll.swift */,
+				309BAC541E6C358600BE5C01 /* UIBarButtonItemColor.swift */,
 				309BAC521E6C06D500BE5C01 /* UIViewColorHead.swift */,
 				309EC14C1E630A5C00ECC41D /* UILabelScores.swift */,
 				309EC14E1E630A7B00ECC41D /* UILabelTimer.swift */,
@@ -154,6 +157,7 @@
 			files = (
 				309EC1401E6309C500ECC41D /* colorCheckGame.xcdatamodeld in Sources */,
 				309EC14F1E630A7B00ECC41D /* UILabelTimer.swift in Sources */,
+				309BAC551E6C358600BE5C01 /* UIBarButtonItemColor.swift in Sources */,
 				309EC13A1E6309C500ECC41D /* ViewController.swift in Sources */,
 				309EC1381E6309C500ECC41D /* AppDelegate.swift in Sources */,
 				309BAC4F1E6C00F100BE5C01 /* UILabelTimerAll.swift in Sources */,

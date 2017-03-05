@@ -68,17 +68,17 @@
                             <barButtonItem title="≣ top" id="ctS-6G-Mcd">
                                 <color key="tintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                             </barButtonItem>
-                            <barButtonItem title="C1" id="W5F-vl-Udm">
+                            <barButtonItem title="C1" id="W5F-vl-Udm" customClass="UIBarButtonItemColor" customModule="colorCheckGame" customModuleProvider="target">
                                 <connections>
                                     <action selector="bckColor1:" destination="BYZ-38-t0r" id="lGV-Dg-E2h"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="C2" id="Dpu-2N-HLh">
+                            <barButtonItem tag="1" title="C2" id="Dpu-2N-HLh" customClass="UIBarButtonItemColor" customModule="colorCheckGame" customModuleProvider="target">
                                 <connections>
                                     <action selector="bckColor2:" destination="BYZ-38-t0r" id="kSL-7j-AlU"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="C3" id="w9C-lA-z8r">
+                            <barButtonItem tag="2" title="C3" id="w9C-lA-z8r" customClass="UIBarButtonItemColor" customModule="colorCheckGame" customModuleProvider="target">
                                 <connections>
                                     <action selector="bckColor3:" destination="BYZ-38-t0r" id="S4m-Ha-8aU"/>
                                 </connections>
@@ -93,6 +93,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="additionalTime" destination="WEf-Vv-Snv" id="6FI-N2-mCE"/>
+                        <outlet property="bckColor1" destination="W5F-vl-Udm" id="TXn-u5-NLT"/>
+                        <outlet property="bckColor2" destination="Dpu-2N-HLh" id="PuY-Lg-upt"/>
+                        <outlet property="bckColor3" destination="w9C-lA-z8r" id="qxG-FU-k9n"/>
                         <outlet property="currentTimer" destination="3Dz-Ms-rIS" id="nLR-Ae-dzr"/>
                         <outlet property="rightAnswers" destination="Qi5-gL-4wi" id="hjd-Ry-fcW"/>
                         <outlet property="wrongAnswers" destination="v5Q-ey-YcR" id="sjG-0z-Ob4"/>

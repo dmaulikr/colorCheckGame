@@ -29,7 +29,11 @@ class UILabelTimer: UILabel {
     func startTimer (fromTime: Float32) {
         
         time = fromTime
-        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(UILabelTimer.timerUpdate), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.01,
+                                     target: self,
+                                     selector: #selector(UILabelTimer.timerUpdate),
+                                     userInfo: nil,
+                                     repeats: true)
     }
     
     func timerUpdate() {
