@@ -9,14 +9,16 @@
 import UIKit
 
 class UILabelTimerAll: UILabelTimerClass {
-    
+
     override func timerUpdate() {
         
         self.time -= 0.01
         
         if self.time < 0 {
             self.time = 0
-            self.timer.invalidate()
+            self.timer.invalidate()            
+            
+            NotificationCenter.default.post(Notification.init(name: Notification.Name(rawValue: "GameOver")))
             
             self.textColor = UIColor.red
             UIView.animate(withDuration: 0.27, animations: {

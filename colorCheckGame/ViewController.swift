@@ -71,7 +71,22 @@ class ViewController: UIViewController {
         
         bckColor1.isActive = true
         currentBckColorFrom = bckColor1.color
+        
+        let button = UIButton(frame: CGRect(x: 300, y: 300, width: 50, height: 50))
+        button.backgroundColor = UIColor.red
+        button.addTarget(self, action: #selector(ViewController.buttonRandom), for: .touchUpInside)
+        view.addSubview(button)
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "GameOver"), object: nil, queue: nil) { (Notification) in
+            print("gameovvveeer")
+        }
     }
+    
+    func buttonRandom() {
+        checkScore(tag: Int(arc4random_uniform(100)))
+    }
+    
+    // MARK: - Common Actions
 
     func startNewGame() {
         
@@ -105,9 +120,25 @@ class ViewController: UIViewController {
     }
     
     func gameOver() {
-        print("game over")
+        buttonStartEnd.gameOver()
     }
     
+    // MARK: - Game Engine
+    
+    func showCircles() {
+        
+    }
+    
+    func checkScore(tag: Int) {
+        
+        if tag > 50 {
+            rightAnswers.addScore()
+        } else {
+            wrongAnswers.addScore()
+        }
+    }
+    
+    // MARK: - Utilities
     func changeBckColorTo(color: UIColor) {
         
         let steps: CGFloat = 20
@@ -134,6 +165,10 @@ class ViewController: UIViewController {
         self.bckColor1.isActive = false
         self.bckColor2.isActive = false
         self.bckColor3.isActive = false
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 
 }
