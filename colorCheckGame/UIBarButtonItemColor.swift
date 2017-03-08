@@ -17,7 +17,7 @@ class UIBarButtonItemColor: UIBarButtonItem {
         
         switch self.tag {
         case 1:
-            self.color = UIColor(colorLiteralRed: 0.988, green: 0.98, blue: 0.964, alpha: 1.0)
+            self.color = UIColor(colorLiteralRed: 0.968, green: 0.955, blue: 0.944, alpha: 1.0)
         case 2:
             self.color = UIColor(colorLiteralRed: 0.2196, green: 0.2156, blue: 0.2078, alpha: 1.0)
         default:

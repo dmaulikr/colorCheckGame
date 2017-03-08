@@ -157,7 +157,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VO3-Ew-ssf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xAY-VV-n7s">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xAY-VV-n7s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

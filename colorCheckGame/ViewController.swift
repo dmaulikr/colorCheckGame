@@ -8,6 +8,15 @@
 
 import UIKit
 
+enum gameLevel: Float32 {
+    case start = 10.0
+    case easy = 8.0
+    case normal = 6.0
+    case hard = 4.0
+    case insane = 2.0
+    case theEnd = 0.0
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var currentTimer: UILabelTimer!
@@ -20,6 +29,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonStartEnd: UIButtonStartEnd!
     
     var currentBckColorFrom: UIColor!
+    var canceledStart = false
     
     @IBAction func bckColor1(_ sender: UIBarButtonItem) {
         changeBckColorTo(color: bckColor1.color)
@@ -35,11 +45,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetGame(_ sender: UIBarButtonItem) {
-        startNewGame()
+        if !buttonStartEnd.stateStart {
+            canceledStart = true
+            buttonStartEnd.cancelledStart = true
+            buttonStartEnd.gameOver()
+            startNewGame()
+            buttonStartEnd.stateStart = true
+        }
     }
     
     @IBAction func buttonStartEnd(_ sender: UIButtonStartEnd) {
-        sender.stateStart = !sender.stateStart
+        
+        buttonStartEnd.stateStart = !buttonStartEnd.stateStart
+        
+        if !buttonStartEnd.stateStart {
+
+            self.perform(#selector(ViewController.startFire), with: nil, afterDelay: 2.0)
+        }
     }
     
     override func viewDidLoad() {
@@ -53,12 +75,37 @@ class ViewController: UIViewController {
 
     func startNewGame() {
         
+        view.layer.removeAllAnimations()
+        currentTimer.layer.removeAllAnimations()
+        additionalTime.layer.removeAllAnimations()
+        currentTimer.superview?.layer.removeAllAnimations()
+        additionalTime.superview?.layer.removeAllAnimations()
+        
         rightAnswers.resetScore()
         wrongAnswers.resetScore()
         additionalTime.resetTime()
         currentTimer.resetTime()
+    }
+    
+    func startFire() {
         
-        currentTimer.startTimer(fromTime: UILabelTimer.level["start"]!)
+        if canceledStart {
+            
+            self.perform(#selector(ViewController.startFireWait), with: nil, afterDelay: 1.0)
+            
+        } else {
+            currentTimer.startTimer(fromTime: gameLevel.insane.rawValue)
+            additionalTime.startTimer(fromTime: gameLevel.insane.rawValue)
+        }
+    }
+    
+    func startFireWait () {
+        canceledStart = false
+        buttonStartEnd.cancelledStart = false
+    }
+    
+    func gameOver() {
+        print("game over")
     }
     
     func changeBckColorTo(color: UIColor) {
@@ -88,7 +135,6 @@ class ViewController: UIViewController {
         self.bckColor2.isActive = false
         self.bckColor3.isActive = false
     }
-
 
 }
 

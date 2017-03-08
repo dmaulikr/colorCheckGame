@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30131C381E70707D00E11225 /* UILabelTimerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30131C371E70707D00E11225 /* UILabelTimerClass.swift */; };
 		309BAC4F1E6C00F100BE5C01 /* UILabelTimerAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309BAC4E1E6C00F100BE5C01 /* UILabelTimerAll.swift */; };
 		309BAC531E6C06D500BE5C01 /* UIViewColorHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309BAC521E6C06D500BE5C01 /* UIViewColorHead.swift */; };
 		309BAC551E6C358600BE5C01 /* UIBarButtonItemColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309BAC541E6C358600BE5C01 /* UIBarButtonItemColor.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30131C371E70707D00E11225 /* UILabelTimerClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelTimerClass.swift; sourceTree = "<group>"; };
 		309BAC4E1E6C00F100BE5C01 /* UILabelTimerAll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelTimerAll.swift; sourceTree = "<group>"; };
 		309BAC521E6C06D500BE5C01 /* UIViewColorHead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewColorHead.swift; sourceTree = "<group>"; };
 		309BAC541E6C358600BE5C01 /* UIBarButtonItemColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemColor.swift; sourceTree = "<group>"; };
@@ -71,12 +73,13 @@
 				309EC1371E6309C500ECC41D /* AppDelegate.swift */,
 				309EC1391E6309C500ECC41D /* ViewController.swift */,
 				309EC13B1E6309C500ECC41D /* Main.storyboard */,
-				309BAC4E1E6C00F100BE5C01 /* UILabelTimerAll.swift */,
 				309BAC541E6C358600BE5C01 /* UIBarButtonItemColor.swift */,
 				309BAC561E6CA1CA00BE5C01 /* UIButtonStartEnd.swift */,
 				309BAC521E6C06D500BE5C01 /* UIViewColorHead.swift */,
 				309EC14C1E630A5C00ECC41D /* UILabelScores.swift */,
 				309EC14E1E630A7B00ECC41D /* UILabelTimer.swift */,
+				309BAC4E1E6C00F100BE5C01 /* UILabelTimerAll.swift */,
+				30131C371E70707D00E11225 /* UILabelTimerClass.swift */,
 				309EC1411E6309C500ECC41D /* Assets.xcassets */,
 				309EC1431E6309C500ECC41D /* LaunchScreen.storyboard */,
 				309EC1461E6309C500ECC41D /* Info.plist */,
@@ -165,6 +168,7 @@
 				309EC1381E6309C500ECC41D /* AppDelegate.swift in Sources */,
 				309BAC4F1E6C00F100BE5C01 /* UILabelTimerAll.swift in Sources */,
 				309EC14D1E630A5C00ECC41D /* UILabelScores.swift in Sources */,
+				30131C381E70707D00E11225 /* UILabelTimerClass.swift in Sources */,
 				309BAC571E6CA1CA00BE5C01 /* UIButtonStartEnd.swift in Sources */,
 				309BAC531E6C06D500BE5C01 /* UIViewColorHead.swift in Sources */,
 			);
