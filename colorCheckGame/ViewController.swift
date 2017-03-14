@@ -27,9 +27,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var bckColor2: UIBarButtonItemColor!
     @IBOutlet weak var bckColor3: UIBarButtonItemColor!
     @IBOutlet weak var buttonStartEnd: UIButtonStartEnd!
+    @IBOutlet weak var buttonResetGame: UIBarButtonItem!
+    
+    var timer : Timer!
     
     var currentBckColorFrom: UIColor!
-    var canceledStart = false
+    var gameTime = 0
     
     @IBAction func bckColor1(_ sender: UIBarButtonItem) {
         changeBckColorTo(color: bckColor1.color)
@@ -45,23 +48,30 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetGame(_ sender: UIBarButtonItem) {
-        if !buttonStartEnd.stateStart {
-            canceledStart = true
-            buttonStartEnd.cancelledStart = true
+        
+        if  buttonStartEnd.stateStart && gameTime > 2 {
+            
+            resetGameTime()
+            buttonStartEnd.stateStart = false
+            additionalTime.isResetGame = true
             buttonStartEnd.gameOver()
             startNewGame()
-            buttonStartEnd.stateStart = true
         }
     }
     
     @IBAction func buttonStartEnd(_ sender: UIButtonStartEnd) {
         
-        buttonStartEnd.stateStart = !buttonStartEnd.stateStart
-        
         if !buttonStartEnd.stateStart {
-
-            self.perform(#selector(ViewController.startFire), with: nil, afterDelay: 2.0)
+            buttonStartEnd.stateStart = true
+            startNewGame()
+            
+            DispatchQueue.main.asyncAfter(deadline: (DispatchTime.now() + 2)) {
+                self.startFire()
+            }
+        } else {
+            buttonStartEnd.stateStart = false
         }
+        
     }
     
     override func viewDidLoad() {
@@ -78,7 +88,7 @@ class ViewController: UIViewController {
         view.addSubview(button)
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "GameOver"), object: nil, queue: nil) { (Notification) in
-            print("gameovvveeer")
+            self.gameOver()
         }
     }
     
@@ -104,23 +114,24 @@ class ViewController: UIViewController {
     
     func startFire() {
         
-        if canceledStart {
-            
-            self.perform(#selector(ViewController.startFireWait), with: nil, afterDelay: 1.0)
-            
-        } else {
-            currentTimer.startTimer(fromTime: gameLevel.insane.rawValue)
-            additionalTime.startTimer(fromTime: gameLevel.insane.rawValue)
+        currentTimer.startTimer(fromTime: gameLevel.insane.rawValue)
+        additionalTime.startTimer(fromTime: gameLevel.insane.rawValue)
+    
+        timer = Timer.scheduledTimer(withTimeInterval: 0.50, repeats: true) { (Timer) in
+            self.gameTime += 1
+            print(self.gameTime)
         }
     }
     
-    func startFireWait () {
-        canceledStart = false
-        buttonStartEnd.cancelledStart = false
+    func gameOver() {
+        buttonStartEnd.setTitle("Game Over", for: .normal)
+        buttonStartEnd.gameOver()
+        resetGameTime()
     }
     
-    func gameOver() {
-        buttonStartEnd.gameOver()
+    func resetGameTime() {
+        timer.invalidate()
+        gameTime = 0
     }
     
     // MARK: - Game Engine

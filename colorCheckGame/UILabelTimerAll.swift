@@ -9,7 +9,9 @@
 import UIKit
 
 class UILabelTimerAll: UILabelTimerClass {
-
+    
+    var isResetGame = false
+    
     override func timerUpdate() {
         
         self.time -= 0.01
@@ -18,7 +20,11 @@ class UILabelTimerAll: UILabelTimerClass {
             self.time = 0
             self.timer.invalidate()            
             
-            NotificationCenter.default.post(Notification.init(name: Notification.Name(rawValue: "GameOver")))
+            if !isResetGame {
+                NotificationCenter.default.post(Notification.init(name: Notification.Name(rawValue: "GameOver")))
+            } else {
+                isResetGame = false
+            }
             
             self.textColor = UIColor.red
             UIView.animate(withDuration: 0.27, animations: {

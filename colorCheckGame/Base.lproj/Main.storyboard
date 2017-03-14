@@ -129,7 +129,7 @@
                                 </connections>
                             </barButtonItem>
                         </leftBarButtonItems>
-                        <barButtonItem key="rightBarButtonItem" title="restart ≣" style="plain" id="dBM-a8-bhA">
+                        <barButtonItem key="rightBarButtonItem" title="restart ≣" id="dBM-a8-bhA">
                             <color key="tintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="resetGame:" destination="BYZ-38-t0r" id="7wC-6y-USi"/>
@@ -141,6 +141,7 @@
                         <outlet property="bckColor1" destination="W5F-vl-Udm" id="TXn-u5-NLT"/>
                         <outlet property="bckColor2" destination="Dpu-2N-HLh" id="PuY-Lg-upt"/>
                         <outlet property="bckColor3" destination="w9C-lA-z8r" id="qxG-FU-k9n"/>
+                        <outlet property="buttonResetGame" destination="dBM-a8-bhA" id="3Lg-GE-6tl"/>
                         <outlet property="buttonStartEnd" destination="Ayh-Xa-8So" id="id2-jW-sEG"/>
                         <outlet property="currentTimer" destination="3Dz-Ms-rIS" id="nLR-Ae-dzr"/>
                         <outlet property="rightAnswers" destination="Qi5-gL-4wi" id="hjd-Ry-fcW"/>
